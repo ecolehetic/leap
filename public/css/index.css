@@ -1,0 +1,555 @@
+/* Museo a wonderfull font by Jos Buivenga: http://exljbris.nl */
+/*@font-face { font-family:"MuseoThree"; src: url('/Users/whamoo/Library/Fonts/Museo300-Regular.otf') format("opentype"); }*/
+@font-face { font-family:"MuseoThree"; src: url("http://static.shinyfrog.net/shinyfrog/fonts/Museo300-Regular.otf") format("opentype"); }
+
+html{ 
+    background: none;
+}
+
+body{
+    height: 100%;
+    background-image:  url(http://www.delibarapp.com/images/bodyBg.jpg);
+    font-family: "Lucida Grande", "Helvetica", "Arial";
+    font-size: 13px;
+    color: #444;
+    line-height: 1.6em;
+}
+
+
+a, a:hover, a:visited{
+    text-decoration: none;
+    color: #2863b2;
+    outline: none;
+}
+
+form, input{
+    outline: none;
+}
+
+input[type="image"]{
+    border: None;
+    width:  188px;
+    height: 52px;
+}
+
+h1, h2{
+    font-family:"MuseoThree";
+    font-size: 24px;
+    color: #3e474e;
+    text-shadow:0 1px 1px #d8e8f7;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2{
+    margin-bottom: 20px;
+    text-shadow: none;
+    text-align: left;
+    color: #333333;
+    margin-top: 40px;
+}
+
+.wrapper{
+    position: relative;
+    width: 740px;
+    margin: 0px auto;
+}
+
+#header{
+    background: url(http://www.delibarapp.com/images/topGradient.png) repeat-x;
+}
+
+a#db_icon{
+    width: 73px; height: 49px;
+    background: url(http://www.delibarapp.com/images/tryMe.png) no-repeat;
+    position: absolute;
+    right: 50px;
+    z-index: 2;
+}
+
+#logo{
+    background: url(http://www.delibarapp.com/images/logoiPhone.jpg) no-repeat;
+    width: 740px; height: 417px;
+    margin: 0px auto;
+    position: relative;
+}
+
+#logolink {
+    display: block;
+    position: absolute;
+    height: 50px;
+    width: 280px;
+
+    top: 260px;
+    left: 280px;
+}
+
+#logo h1{
+    position: relative;
+    top: 348px;
+}
+
+#actionButtons{
+    margin: 0px auto;
+    width: 534px;
+}
+
+#actionButtons li{
+    float: left;
+}
+
+#buyButton{
+    width: 188px; height: 52px;
+    background: url(http://www.delibarapp.com/images/topButtonsDolla.png) left top;
+}
+
+#buyButton:hover{
+    cursor: pointer;
+    background: url(http://www.delibarapp.com/images/topButtonsDolla.png) left center;
+}
+
+#buyButton:active{
+    background: url(http://www.delibarapp.com/images/topButtonsDolla.png) left bottom;
+}
+
+#buyButton a{
+    display: block;
+    width: 188px; height: 52px;
+    text-indent: -3000px;
+}
+
+#downloadButton{
+    width: 172px; height: 52px;
+    background: url(http://www.delibarapp.com/images/topButtonsDolla.png) -188px top;
+}
+
+#downloadButton:hover{
+    cursor: pointer;
+    background: url(http://www.delibarapp.com/images/topButtonsDolla.png) -188px center;
+}
+
+#downloadButton:active{
+    background: url(http://www.delibarapp.com/images/topButtonsDolla.png) -188px bottom;
+}
+
+#downloadButton a{
+    display: block;
+    width: 172px; height: 52px;
+    text-indent: -3000px;
+}
+
+
+#supportButton{
+    width: 174px; height: 52px;
+    background: url(http://www.delibarapp.com/images/topButtonsDolla.png) right top;    
+}
+
+#supportButton:hover{
+    cursor: pointer;
+    background: url(http://www.delibarapp.com/images/topButtonsDolla.png) right center;
+}
+
+#supportButton:active{
+    background: url(http://www.delibarapp.com/images/topButtonsDolla.png) right bottom;
+}
+
+#supportButton a{
+    display: block;
+    width: 174px; height: 52px;
+    text-indent: -3000px;
+}
+
+#content{
+    margin-top: 80px;
+    position: relative;
+}
+
+#shinyLogoSmall{
+    width: 45px;
+    height: 45px;
+    background: url(http://www.delibarapp.com/images/shinyLogoSmall.png) left no-repeat;
+    display: block;
+    position: absolute;
+    left: 50px;
+    text-indent: -3000px;
+    top: 6px;
+    z-index: 3;
+}
+
+#shinyLogoSmall:hover{
+    background: url(http://www.delibarapp.com/images/shinyLogoSmall.png) right no-repeat;
+}
+
+#blackscreen {
+    position: fixed;
+    top: 0px; left: 0px;
+    width: 100%;
+    height:1500px;
+    background: url(http://www.delibarapp.com/images/overlay_back.png);
+    z-index: 10;
+    display: none;
+}
+
+/********* NAVIGATION *************************************************************/
+
+#navigation{
+    position: absolute;
+    top: -41px;
+    left: 30px;
+}
+
+#navigation li{
+    float: left;
+    margin-left: 10px;
+}
+#navigation li a{display:block;width:127px;height:53px;position:relative;background: url(http://www.delibarapp.com/images/newTabs2_O.png) 0 -60px no-repeat}
+
+
+#navigation li#about a       {background-position:left -60px; }
+#navigation li#about.tabActive a,#navigation li#about.tabActive a:hover  { background-position:0 top; z-index: 4; }
+#navigation li#about a:hover   { background-position:0 -67px; }
+
+#navigation li#search a      { background-position: -127px -60px;  }
+#navigation li#search.tabActive a,#navigation li#search.tabActive a:hover { background-position:-127px top; z-index: 4; }
+#navigation li#search a:hover  { background-position:-127px -67px; }
+
+#navigation li#share a       { background-position:-254px -60px;  }
+#navigation li#share.tabActive a,#navigation li#share.tabActive a:hover { background-position:-254px top; z-index: 4; }
+#navigation li#share a:hover   { background-position:-254px -67px; }
+
+#navigation li#manage a      { background-position:-381px -60px;  }
+#navigation li#manage.tabActive a,#navigation li#manage.tabActive a:hover { background-position:-381px top; z-index: 4; }
+#navigation li#manage a:hover  { background-position:-381px -67px;  }
+
+#navigation li#discover a       { background-position:-508px -60px;  }
+#navigation li#discover.tabActive a,#navigation li#discover.tabActive a:hover { background-position:-508px top; z-index: 4; }
+#navigation li#discover a:hover   { background-position:-508px -67px; }
+
+
+
+
+#tabBottom{ position: absolute; background: url(http://www.delibarapp.com/images/tabBottomPlusLogo.jpg) top; width: 131px; height: 55px; bottom: 0px; z-index: 2;}
+.about { left: 30px; }
+.search {left: 167px; }
+.share {left: 304px;}
+.manage {left: 441px;}
+.discover {left: 578px;}
+
+/********* END NAVIGATION *************************************************************/
+
+
+
+/********* SLIDES *************************************************************/
+
+.slideHidden{
+    display: none;
+}
+
+.whiteBoxMiddle h2{
+    margin-top: 20px;
+}
+
+.leftP{
+    /*width: 470px;
+    float: left;
+    margin-right: 35px;*/
+    width: 460px;
+}
+
+.leftSmallP{
+    width: 385px;
+}
+
+.slide p{
+    margin-bottom: 20px;
+}
+
+#help{
+
+    margin-bottom: 25px;
+}
+
+#help li{
+    padding-left: 25px;
+}
+
+.helpIcon{
+    background: url(http://www.delibarapp.com/images/Delibar-16.png) 0px 2px no-repeat;
+    padding-bottom: 10px;
+
+}
+
+.iMacIcon{
+    background: url(http://www.delibarapp.com/images/iMac-16.png) 0px 2px no-repeat;
+
+}
+
+#screenshotsSmall{
+    position: absolute;
+    top: 72px;
+    right: 180px;
+    width:  135px;
+}
+
+#screenshotsSmall li{
+    float: left;
+    margin-left: 10px;
+    width: 57px; height: 60px;
+}
+
+#screenshotsSmall li a{
+    display: block;
+    height: 60px;
+}
+
+#screenshotsSmall li#manageSmall{
+    background: url(http://www.delibarapp.com/images/screens/smallThumbs.jpg) top left;
+    width: 58px;
+}
+
+#screencast{
+    width: 122px; height: 120px;
+    position: absolute;
+    display: block;
+    top: 73px;
+    right: 44px;
+    background: url(http://www.delibarapp.com/images/screencast.jpg) no-repeat;
+    cursor: pointer;
+}
+
+#shareSmall{
+    background: url(http://www.delibarapp.com/images/screens/smallThumbs.jpg) top right;
+}
+
+#networkSmall{
+    background: url(http://www.delibarapp.com/images/screens/smallThumbs.jpg) bottom left;
+}
+
+#twitterSmall{
+    background: url(http://www.delibarapp.com/images/screens/smallThumbs.jpg) bottom right;
+}
+
+
+#comparisonTable{
+    float: left;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+#buyDownload{
+    margin-top: 80px;
+    margin-left: 490px;
+
+}
+
+#downloadNow{
+    background: url(http://www.delibarapp.com/images/downloadBuyIcons.png) left top no-repeat;
+    padding-left: 32px;
+}
+
+#buyNow{
+    margin-top: 20px;
+    background: url(http://www.delibarapp.com/images/downloadBuyIcons.png) left bottom no-repeat;
+    padding-left: 32px;
+
+}
+
+#buyNow form{
+    position: absolute;
+    height: 20px;
+    width: 120px;
+}
+
+#buyNow form:hover + span{
+    color: #2863b2;
+    
+}
+
+#buyDownload a{
+    font-family:"MuseoThree";
+
+    color: #444;
+}
+#buyDownload a:hover{
+    color: #2863b2;
+}
+
+#shareIconsList{
+    width: 294px;
+    padding: 10px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 18px;
+    background-color: #4e6281;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin: 0px auto;
+    margin-top: 40px;
+    
+}
+
+#shareIconsList li{
+    float: left;
+    margin-left: 20px;
+}
+
+#shareIconsList li.firstElem{
+    margin-left: 0px;
+}
+
+.imgThumb{
+    position: absolute;
+    top: 62px;
+    right: 44px;
+
+}
+
+#networkScreen{
+    top: 62px;
+    right: 44px;
+}
+
+#specialSearches li{
+    margin-bottom: 8px;
+    background: url(http://www.delibarapp.com/images/savedSearches16.png) no-repeat;
+    padding-left: 25px;
+}
+
+/********* END SLIDES *************************************************************/
+
+
+
+/********* FOOTER *************************************************************/
+
+#twitterFollow{
+    display: block;
+    position: absolute;
+    background: url(http://www.delibarapp.com/images/twitterLink.png);
+    width: 121px; height: 38px;
+    right: 20px;
+    top: -36px;
+    z-index: 3;
+}
+
+#footerBox{
+    height: 200px;
+    position: relative;
+}
+
+#footerBox .blueBoxMiddle{
+    height: 125px;
+}
+
+#footerBox .blueBoxMiddle .whiteBoxMiddle{
+    height: 110px;
+    padding-left: 44px;
+    padding-right: 44px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#shinylogo{
+    background: url(http://www.delibarapp.com/images/tabBottomPlusLogo.jpg) bottom; width: 131px; height: 107px;
+    float: left;
+}
+
+#moreinfo{
+    padding-top: 15px;
+}
+
+#moreinfo p{
+    margin-left: 155px;
+    margin-bottom: 15px;
+}
+
+/********* END FOOTER *************************************************************/
+
+
+/********* BOXES *************************************************************/
+#mainbox{
+    height: 577px;  
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#mainbox .blueBoxMiddle{
+    height: 500px;
+}
+
+.blueBox{
+    width: 740px;
+}
+
+
+.blueBoxTop{
+    position: relative;
+    background: url(http://www.delibarapp.com/images/boxesTopBottom.png) center top no-repeat;
+    height: 14px;
+}
+
+.blueBoxMiddle{
+    position: relative;
+    background: url(http://www.delibarapp.com/images/blueBoxMiddle.png) top center repeat-y;
+}
+
+.blueBoxBottom{
+    position: relative;
+    background: url(http://www.delibarapp.com/images/boxesTopBottom.png) center -14px no-repeat;
+    height: 14px;
+}
+
+.slide {
+    position: absolute !important;
+}
+
+.slide .whiteBoxMiddle{
+    padding-left: 44px; padding-right: 40px; padding-top: 17px;
+    height: 491px;
+
+}
+
+.whiteBox{
+    position: relative;
+    top: -20px;
+    z-index: 2;
+    width: 740px;
+}
+
+
+.whiteBoxTop{
+    position: relative;
+    background: url(http://www.delibarapp.com/images/boxesTopBottom.png) center -28px no-repeat;
+    height: 18px;
+}
+
+
+.whiteBoxMiddle{
+    position: relative;
+    background: url(http://www.delibarapp.com/images/whiteBoxMiddle.png) center repeat-y;
+}
+
+
+.whiteBoxBottom{
+    position: relative;
+    background: url(http://www.delibarapp.com/images/boxesTopBottom.png) center -46px no-repeat;
+    height: 18px;
+}
+
+/********* END BOXES *************************************************************/
+
+.cleaner{
+    clear: both;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+
+
+
+

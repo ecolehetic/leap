@@ -22,9 +22,9 @@ class Admin extends Prefab{
   function update($id){
     $image=Web::instance()->receive();
     if($image){
-        $this->resize($image);
+        $this->resize($image[0]);
         $pictures=new DB\SQL\Mapper(F3::get('dB'),'pictures');
-        $pictures->src=$image;
+        $pictures->src=$image[0];
         $pictures->idLocation=$id;
         $pictures->save();
     }
@@ -44,9 +44,9 @@ class Admin extends Prefab{
 
     $image=Web::instance()->receive();
     if($image){
-        $this->resize($image);
+        $this->resize($image[0]);
         $pictures=new DB\SQL\Mapper(F3::get('dB'),'pictures');
-        $pictures->src=$image;
+        $pictures->src=$image[0];
         $pictures->idLocation=$location->id;
         $pictures->save();
     }
@@ -54,7 +54,7 @@ class Admin extends Prefab{
   }
   
   function resize($image){
-    $img=new \Image(F3::get('UPLOADS').$image,TRUE);
+    $img=new \Image(F3::get('UPLOADS').$image,true);
     $img->resize(1024,768);
     file_put_contents(F3::get('UPLOADS').$image,$img->dump('jpeg'));
   }

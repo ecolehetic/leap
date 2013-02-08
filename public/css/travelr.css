@@ -52,6 +52,8 @@ footer a {position:relative;line-height:1.5em;font-size:1.2em;}
 footer a::before{content:'';display:block;background: transparent url('../css/img/sprite.png')0 -210px no-repeat;width: 25px;height: 33px;position:absolute; left:-2em; bottom:-5px;}
 footer a:hover::before{height:66px;}
 
+.error{border:2px solid #992C3B;}
+
 .admin{background-color:#111;;}
 .admin .main ul{list-style: none;}
 .admin div.main li{position:relative;line-height:3em;font-size:2em;padding:0 1em;border-bottom:1px dashed #fff;}

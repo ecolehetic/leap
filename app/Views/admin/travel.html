@@ -36,12 +36,12 @@
       <h1><?php echo $location->title ?></h1>
       <form action="" method="post" enctype="multipart/form-data">
         <fieldset>
-        <span class="error"><?php echo implode(', ',$errorMsg); ?></span>
-        <input type="text" name="title" placeholder="Title" value="<?php echo $location->title ?>"/>
-        <textarea name="content" rows="8" cols="15"><?php echo $location->content ?></textarea>
+        
+        <input type="text" name="title" placeholder="Title" value="<?php echo $location->title ?>" <?php if($errorMsg['title']){ echo 'class="error"'; } ?>/>
+        <textarea name="content" rows="8" cols="15"<?php if($errorMsg['content']){ echo 'class="error"'; } ?>><?php echo $location->content ?></textarea>
         <fieldset class="geocoder">
           <?php if(!$location): ?>
-          <input type="text" name="position" placeholder="localisation" value="" id="position"/><a href="" id="search-position"><i class="icon-magnifying icon2x"></i></a>
+          <input type="text" name="position" placeholder="localisation" value="" id="position" <?php if($errorMsg['lat']||$errorMsg['lng']){ echo 'class="error"'; } ?>/><a href="" id="search-position"><i class="icon-magnifying icon2x"></i></a>
           <?php endif; ?>
           <div id="map_canvas">
             
@@ -53,6 +53,7 @@
           <?php foreach($pictures as $pic): ?>
           <img height="100" src="public/images/<?php echo $pic->src ?>" />
           <?php endforeach ?>
+          <input type="file" name="picture[]" />
           <input type="file" name="picture[]" />
         </fieldset>
         <input type="submit" value="save"/>

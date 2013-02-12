@@ -1,5 +1,5 @@
 var map;
-var image='/P2015/f3/public/css/img/marker.png';
+var image='/2015/public/css/img/marker.png';
 
 $(function(){
 	drawMap();
@@ -7,6 +7,9 @@ $(function(){
 			geoCoding();
 			return false;
 	});
+	$('.images img.delete').bind('click',function(){
+		console.log($(this).attr('src'));
+	})
 });
 function drawMap(){
 	

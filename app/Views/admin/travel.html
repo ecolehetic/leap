@@ -27,7 +27,11 @@
       <ul class="main">
         <li><a href="admin/dashboard">Dashboard</a></li>
       </ul>
+      <ul>
+          <li><?php echo $SESSION['userName'] ?> <a href="admin/logout"><i class="icon-signout"></i></a></li> 
+      </ul>
     </nav>
+    
   </header>
   <section>
     
@@ -53,7 +57,6 @@
           <?php foreach($pictures as $pic): ?>
           <img height="100" src="public/images/<?php echo $pic->src ?>" />
           <?php endforeach ?>
-          <input type="file" name="picture[]" />
           <input type="file" name="picture[]" />
         </fieldset>
         <input type="submit" value="save"/>

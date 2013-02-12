@@ -52,7 +52,7 @@ footer a {position:relative;line-height:1.5em;font-size:1.2em;}
 footer a::before{content:'';display:block;background: transparent url('../css/img/sprite.png')0 -210px no-repeat;width: 25px;height: 33px;position:absolute; left:-2em; bottom:-5px;}
 footer a:hover::before{height:66px;}
 
-.error{border:2px solid #992C3B;}
+.error{border:3px solid #992C3B;}
 
 .admin{background-color:#111;;}
 .admin .main ul{list-style: none;}
@@ -64,6 +64,8 @@ footer a:hover::before{height:66px;}
 .admin h1 a{font-size:.5em;margin-left:2em;color:#0D0D0D;}
 .admin h1 a:hover{color:#fff;}
 
+
+
 fieldset{border:none;}
 input, textarea{display:block;width:80%;line-height:1.5em;font-family:'DIN',Arial,sans-serif;font-size:1.5em;color:#333;border:none;border-radius:5px;padding:0 .5em;margin:1em 0 1em 0;}
 input[name='position']{width:30%;display:inline;margin-right:1em;}
@@ -71,3 +73,4 @@ input[type='submit']{width:auto;background-color:#fff;}
 .admin #map_canvas{width:80%;height:30em;background:#fff;margin:1em 0 1em 0;}
 .admin p.pictures {width:300px;margin:0;position:relative;}
 .admin p.pictures a {position:absolute;right:0;}
+.login input{width:20%;}

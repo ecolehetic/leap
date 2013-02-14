@@ -28,6 +28,17 @@ class App_controller{
     //F3::set('content',App::instance()->getContent($page->id));
     
     
+    $page=$app->getPage($slug);
+    if(!$page){
+      F3::error(404);
+      return;
+    }
+    F3::set('page',$page);
+    
+    $content=$app->getContent($page->id);
+    F3::set('content',$content);
+    
+    
     $views=new Views();
     echo $views->render('layout.html');
     //echo Views::instance()->render(F3::get('PARAMS.slug').'.html');

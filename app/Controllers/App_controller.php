@@ -6,9 +6,7 @@ class App_controller{
     $slug=F3::get('PARAMS.slug');
     
     $app=new App();
-    $menu=$app->getMenu();
-    F3::set('menu',$menu);
-    //F3::set('menu',App::instance()->getMenu());
+    
     
     $page=$app->getPage($slug);
     if(!$page){
@@ -27,16 +25,16 @@ class App_controller{
     F3::set('content',$content);
     //F3::set('content',App::instance()->getContent($page->id));
     
-    
-    $page=$app->getPage($slug);
-    if(!$page){
-      F3::error(404);
+    if (F3::get('AJAX')) {
+      echo Views::instance()->render('partials/'.$slug.'.html');
       return;
     }
-    F3::set('page',$page);
     
-    $content=$app->getContent($page->id);
-    F3::set('content',$content);
+    
+    
+    $menu=$app->getMenu();
+    F3::set('menu',$menu);
+    //F3::set('menu',App::instance()->getMenu());
     
     
     $views=new Views();

@@ -12,16 +12,7 @@ class App extends Prefab {
     $menu=new DB\SQL\Mapper(F3::get('dB'),'page');
     return $menu->find();
   }
-  
-  function getPage($slug){
-    $page=new DB\SQL\Mapper(F3::get('dB'),'page');
-    return $page->load(array('slug=?',$slug));
-  }
 
-  function getContent($idPage){
-    $content=new DB\SQL\Mapper(F3::get('dB'),'content');
-    return $content->find(array('idPage=?',$idPage));
-  }
   
   
   

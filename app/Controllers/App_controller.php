@@ -8,27 +8,9 @@ class App_controller{
     $app=new App();
     $menu=$app->getMenu();
     F3::set('menu',$menu);
-    //F3::set('menu',App::instance()->getMenu());
-    
-    $page=$app->getPage($slug);
-    if(!$page){
-      F3::error(404);
-      return;
-    }
-    F3::set('page',$page);
-    /*if(!$page=App::instance()->getPage(F3::get('PARAMS.slug'))){
-      F3::error(404);
-      return;
-    }
-    F3::set('page',$page);*/
-    
-    $content=$app->getContent($page->id);
-    F3::set('content',$content);
-    //F3::set('content',App::instance()->getContent($page->id));
     
     $views=new Views();
-    echo $views->render('layout.html');
-    //echo Views::instance()->render('layout.html');
+    echo $views->render($slug.'.html');
     
   }
 

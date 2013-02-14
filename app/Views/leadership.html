@@ -49,34 +49,18 @@
   <section class="container">
   <div class="row">
     <div class="span11">
-          <h1>Page title</h1>
+          <h1><?php echo $page->title ?></h1>
+          <?php foreach($content as $i=>$item): ?>
           <div class="media">
-            <span class="pull-left">
-              <img class="media-object" src="" />
+            <span class="pull-<?php if(is_int($i/2)){echo 'left';}else{echo 'right';} ?>">
+              <img class="media-object" src="public/assets/<?php echo $item->picture ?>" />
             </span>
             <div class="media-body">
-              <h2>Content title</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h2><?php echo $item->title ?></h2>
+              <p><?php echo $item->content ?></p>
             </div>
           </div>
-          <div class="media">
-            <span class="pull-right">
-              <img class="media-object" src="" />
-            </span>
-            <div class="media-body">
-              <h2>Content title</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
-          <div class="media">
-            <span class="pull-left">
-              <img class="media-object" src="" />
-            </span>
-            <div class="media-body">
-              <h2>Content title</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
+          <?php endforeach; ?>
           
         </div>
   </div>

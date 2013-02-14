@@ -8,6 +8,13 @@ class App extends Prefab {
   }
   
   
+  function getMenu(){
+    $menu=new DB\SQL\Mapper(F3::get('dB'),'page');
+    return $menu->find();
+  }
+
+  
+  
   
 }
 ?>

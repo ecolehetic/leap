@@ -26,10 +26,10 @@ class App_controller{
     //F3::set('content',App::instance()->getContent($page->id));
     
     if (F3::get('AJAX')) {
-      echo Views::instance()->render('partials/'.$slug.'.html');
+      $views=new Views();
+      echo $views->render('partials/'.$slug.'.html');
       return;
     }
-    
     
     
     $menu=$app->getMenu();
